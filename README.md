@@ -5,6 +5,7 @@
 Propertize is a user-friendly and efficient CRUD real estate dashboard application. Propertize was designed to streamline and simplify property management for real estate adminstrators and agents. The application provides a centralized location for administrators to manage all aspects of real estate, including property listings, property reviews, etc.
 
 
+
 # Features
 - User-friendly and responsive web designs.
 - Google OAuth authentication/authorization. No need to remember another hard combination of username & password.
@@ -18,8 +19,9 @@ Propertize is a user-friendly and efficient CRUD real estate dashboard applicati
 
 # Technology Used
 - Frontend
-    - TypeScript
-    - React
+    - HTML5
+    - CSS
+    - React TypeScript
     - Refine
     - Material UI
     - React Router
