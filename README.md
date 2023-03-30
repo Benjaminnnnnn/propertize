@@ -28,6 +28,7 @@ Propertize is a user-friendly and efficient CRUD real estate dashboard applicati
     - Google OAuth
 
 - Backend
+    - Node
     - Express
     - MongoDB
     - MVC design pattern
