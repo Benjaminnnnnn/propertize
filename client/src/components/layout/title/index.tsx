@@ -2,7 +2,7 @@ import { Button } from "@mui/material";
 import { TitleProps, useLink } from "@refinedev/core";
 import React from "react";
 
-import { logo, yariga } from "assets";
+import { logo, propertize } from "assets";
 
 export const Title: React.FC<TitleProps> = ({ collapsed }) => {
   const Link = useLink();
@@ -13,7 +13,7 @@ export const Title: React.FC<TitleProps> = ({ collapsed }) => {
         {collapsed ? (
           <img src={logo} alt="Yariga" width="28px" />
         ) : (
-          <img src={yariga} alt="Refine" width="140px" />
+          <img src={propertize} alt="Refine" width="140px" />
         )}
       </Link>
     </Button>
