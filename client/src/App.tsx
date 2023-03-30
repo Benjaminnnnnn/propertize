@@ -28,6 +28,7 @@ import axios, { AxiosRequestConfig } from "axios";
 import { CredentialResponse } from "interfaces/google";
 
 import {
+  AgentProfile,
   Agents,
   AllProperties,
   CreateProperty,
@@ -153,7 +154,6 @@ function App() {
 
   return (
     <BrowserRouter>
-      {/* <GitHubBanner /> */}
       <RefineKbarProvider>
         <ColorModeContextProvider>
           <CssBaseline />
@@ -176,13 +176,14 @@ function App() {
                 {
                   name: "properties",
                   list: "properties",
-                  show: PropertyDetails,
+                  show: "properties/show/:id",
                   create: "properties/create",
-                  edit: EditProperty,
+                  edit: "properties/edit/:id",
                   icon: <VillaOutlined></VillaOutlined>,
                 },
                 {
                   name: "agents",
+                  show: "agents/show/:id",
                   list: "agents",
                   icon: <PeopleAltOutlined></PeopleAltOutlined>,
                 },
@@ -230,35 +231,35 @@ function App() {
                       path="create"
                       element={<CreateProperty></CreateProperty>}
                     ></Route>
+                    <Route
+                      path="show/:id"
+                      element={<PropertyDetails></PropertyDetails>}
+                    ></Route>
+                    <Route
+                      path="edit/:id"
+                      element={<EditProperty></EditProperty>}
+                    ></Route>
                   </Route>
+
                   <Route path="/agents">
                     <Route index element={<Agents></Agents>}></Route>
+                    <Route
+                      path="show/:id"
+                      element={<AgentProfile></AgentProfile>}
+                    ></Route>
                   </Route>
+
                   <Route path="/reviews">
                     <Route index element={<Home></Home>}></Route>
                   </Route>
+
                   <Route path="/messages">
                     <Route index element={<Home></Home>}></Route>
                   </Route>
+
                   <Route path="/my-profile">
                     <Route index element={<MyProfile></MyProfile>}></Route>
                   </Route>
-                  {/* <Route
-                    index
-                    element={<NavigateToResource resource="products" />}
-                  />
-                  <Route path="/products">
-                    <Route index element={<ProductList />} />
-                    <Route path="create" element={<ProductCreate />} />
-                    <Route path="edit/:id" element={<ProductEdit />} />
-                    <Route path="show/:id" element={<ProductShow />} />
-                  </Route>
-                  <Route path="/categories">
-                    <Route index element={<CategoryList />} />
-                    <Route path="create" element={<CategoryCreate />} />
-                    <Route path="edit/:id" element={<CategoryEdit />} />
-                    <Route path="show/:id" element={<CategoryShow />} />
-                  </Route> */}
                 </Route>
 
                 <Route

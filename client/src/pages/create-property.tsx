@@ -1,13 +1,11 @@
 import { useGetIdentity } from "@refinedev/core";
 import { useForm } from "@refinedev/react-hook-form";
 import { useState } from "react";
-import { useNavigate } from "react-router";
 
 import Form from "components/common/Form";
 import { FieldValues } from "react-hook-form";
 
 const CreateProperty = () => {
-  const navigate = useNavigate();
   const { data: user } = useGetIdentity();
   const [propertyImage, setPropertyImage] = useState({
     name: "",

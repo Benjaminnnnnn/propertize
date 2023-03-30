@@ -1,3 +1,4 @@
+import { PhotoCamera } from "@mui/icons-material";
 import {
   Box,
   Button,
@@ -187,6 +188,7 @@ const Form = ({
                   textTransform: "capitalize",
                   fontSize: 16,
                 }}
+                startIcon={<PhotoCamera></PhotoCamera>}
               >
                 Upload *
                 <input

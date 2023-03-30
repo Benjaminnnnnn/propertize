@@ -30,6 +30,10 @@ const CustomButton = ({
           opacity: 0.9,
           backgroundColor,
         },
+        "&.Mui-disabled": {
+          background: "#eaeaea",
+          color: "#c0c0c0",
+        },
       }}
       onClick={handleClick}
     >
