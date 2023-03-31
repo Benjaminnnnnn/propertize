@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import { useLogin } from "@refinedev/core";
-import { yariga } from "assets";
+import { propertize } from "assets";
 import { useEffect, useRef } from "react";
 import { CredentialResponse } from "../interfaces/google";
 
@@ -49,7 +49,7 @@ export const Login: React.FC = () => {
       }}
     >
       <div>
-        <img src={yariga} alt="yariga" />
+        <img src={propertize} alt="propertize" />
       </div>
 
       <Box mt={4}>
