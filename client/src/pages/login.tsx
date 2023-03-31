@@ -41,18 +41,18 @@ export const Login: React.FC = () => {
   return (
     <div
       style={{
-        height: "100vh",
+        height: "80vh",
         display: "flex",
         justifyContent: "center",
         flexDirection: "column",
         alignItems: "center",
       }}
     >
-      <div>
-        <img src={propertize} alt="propertize" />
+      <div style={{ height: "40vh" }}>
+        <img src={propertize} alt="propertize" height="100%" width="100%" />
       </div>
 
-      <Box mt={4}>
+      <Box mt={-10}>
         <GoogleButton />
       </Box>
     </div>
